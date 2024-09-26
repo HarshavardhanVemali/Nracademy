@@ -1,0 +1,89 @@
+/* Basic Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header Styles */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .header img {
+    width: 150px; /* Adjust as needed */
+    margin-bottom: 10px;
+  }
+  
+  /* Banner Styles */
+  .banner {
+    background-color: #f05454; /* Example color from image */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Foundation Classes Styles */
+  .foundation-classes {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Location and Contact Styles */
+  .location-info, .contact {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    display: flex;
+  }
+  
+  .join-now {
+    background-color: #30475e; /* Example color */
+    color: white;
+    padding: 30px;
+    margin-right: 20px;
+    flex: 1;
+    text-align: center;
+  }
+  
+  .admissions {
+    border: 2px dashed white; 
+    padding: 15px;
+  }
+  
+  .coaching-details {
+    flex: 2;
+    display: flex;
+    justify-content: space-between; /* Distribute elements evenly */
+  }
+  
+  .lets-crack, .batches, .subjects, .study-material, .hostel {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 23%; /* Adjust percentage for column width */
+    text-align: center;
+  }
+  
+  .lets-crack ul, .batches ul, .subjects ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Footer Styles */
+  .footer {
+    background-color: #30475e;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px; 
+  }
