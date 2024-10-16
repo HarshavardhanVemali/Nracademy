@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NR Academy | Academic Excellence Since 2019</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <link rel="icon" type="image/png" sizes="32x32" href="images/nr_logo_processed.jpg">
 </head>
 <style>
@@ -30,7 +37,10 @@ body {
     margin: 0;
     line-height: 1.6;
 }
-
+main{
+    width: 100% !important;
+    overflow-x: hidden;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -126,19 +136,22 @@ nav .container {
 }
 
 #home {
-    min-height: 600px; 
-    display: flex;
-    align-items: center;
-    background: linear-gradient(to right, #ffaaaa, #ffdddd);
-    color: #333;
-    text-align: center;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ffaaaa, #ffdddd);
+  color: #333;
+  text-align: center;
+  margin-top: 83px;
 }
 
 #home .container {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center;
-    flex-wrap: wrap; 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%; 
+  padding: 0 20px;
 }
 
 .hero-content {
@@ -452,8 +465,132 @@ footer {
     .contact-details {
         margin-bottom: 30px;
     }
+    .contact-details{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .hours{
+        width: 100%;
+    }
+    #contact,#results,#about{
+        padding: 10px 0;
+    }
+    h2{
+        font-size: 1.5em !important;
+        margin-bottom: 5px !important;
+    }
+    nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    #home .container{
+        margin-top: 20px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-content h1{
+        font-size: 1.5em;
+        margin-top: 10px;
+        text-align: center;
+    }
+    #carouselExampleRide {
+    max-width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    min-width: 550px;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    max-height: 400px;
+    }
+
+    .carousel-inner .carousel-item img {
+    max-width: 100%;
+    min-width: 550px;
+    height: auto;
+    display: block; 
+    border-radius: 10px;
+    max-height: 400px;
+    }
+    #carouselExampleRide {
+        min-width: calc(100% - 40px) !important; 
+        max-width: calc(100% - 40px) !important;
+    }
+
+    .carousel-inner .carousel-item img {
+        min-width: calc(100% ) !important;
+    }
+}
+#home {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #ffaaaa, #ffdddd);
+  color: #333;
+  text-align: center;
+  margin-top: 83px;
 }
 
+#home .container {
+  display: flex;
+  justify-content: space-around; 
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  padding: 0px;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: center; 
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto; 
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); 
+ 
+}
+
+#carouselExampleRide {
+  max-width: 100%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  min-width: 550px;
+  max-width: 550px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  max-height: 400px;
+}
+
+.carousel-inner .carousel-item img {
+  max-width: 100%;
+  min-width: 550px;
+  height: auto;
+  display: block; 
+  border-radius: 10px;
+  max-height: 400px;
+}
+.carousel-control-prev,.carousel-control-next{
+    color: #333;
+}
 </style>
 <body>
     <nav>
@@ -476,148 +613,167 @@ footer {
     </nav>
 
 
-    <section id="home">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="animate__animated animate__fadeInUp" data-aos="fade-up">Nurture Your Dreams, <br> Achieve Excellence</h1>
-                <p class="animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">At NR Academy, we guide you towards a brighter future ... </p>
-                <a href="#courses" class="btn animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">Explore Our Programs</a>
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="animate__animated animate__fadeInUp" data-aos="fade-up">Nurture Your Dreams, <br> Achieve Excellence</h1>
+                    <p class="animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">At NR Academy, we guide you towards a brighter future ... </p>
+                    <a href="#courses" class="btn animate__animated animate__fadeInUp" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">Explore Our Programs</a>
+                </div>
+                <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner"  data-aos="fade-right">
+                      <div class="carousel-item active">
+                        <img src="images\1727877434699.jpg" alt="Students Studying" class="animate__animated animate__fadeIn"> 
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images\IMG-20240911-WA0033.jpg" alt="Teacher and Student">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="images\IMG-20240413-WA0072.jpg" alt="Students Studying" class="animate__animated animate__fadeIn"> 
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
             </div>
-            <div class="hero-image" data-aos="fade-right"> 
-                <img src="images/students-studying.jpg" alt="Students Studying" class="animate__animated animate__fadeIn"> 
-            </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2 data-aos="fade-up">About NR Academy</h2>
-            <div class="about-content">
-                <div class="about-image" data-aos="fade-right" data-aos-duration="1000"
-                data-aos-delay="200">
-                    <img src="images/teacherandstudent.webp" alt="Teacher and Student">
-                </div>
-                <div class="about-text" data-aos="fade-left" data-aos-duration="1000"
-                data-aos-delay="200">
-                <p>Established in 2019, NR Academy is dedicated to shaping young minds and fostering academic brilliance. Our commitment to providing quality education and individual attention has made us a trusted choice for entrance exam preparation.</p>
-                <p>We believe in creating a nurturing learning environment that encourages students to think critically, strive for excellence, and develop a strong foundation for their future success. </p>
-                    <a href="#contact" class="btn">Get in Touch</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="courses" class="bg-light"> 
-        <div class="container">
-            <h2 data-aos="fade-up">Our Specialized Courses</h2>
-            <div class="course-grid">
-                <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">
-                    <img src="images/sainikschool.jpg" alt="Sainik School">
-                    <h3>Sainik Schools</h3>
-                    <p>For Boys & Girls</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">
-                    <img src="images/military.jpg" alt="Military School">
-                    <h3>Military Schools</h3>
-                    <p>Rigorous Training & Discipline</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">
-                    <img src="images/novodaya.avif" alt="Navodaya">
-                    <h3>Navodaya</h3>
-                    <p>Excellence in Education</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
-                data-aos-delay="200">
-                    <img src="images/jee.webp" alt="JEE IIT">
-                    <h3>JEE | IIT</h3>
-                    <p>Foundation Classes</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-                <div class="course animate__animated animate__zoomIn" data-aos="fade-up"data-aos-duration="1000"
-                data-aos-delay="200">
-                    <img src="images/neet.webp" alt="NEET">
-                    <h3>NEET</h3>
-                    <p>Foundation Classes</p>
-                    <a href="#" class="btn">Learn More</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="results" class="bg-light">
-        <div class="container">
-            <h2>Our Proven Results</h2>
-            <p class="animate__animated animate__fadeInUp">Our students consistently achieve top ranks in various entrance exams, a testament to our effective coaching methods and their hard work.</p>
-            <div class="results-grid animate__animated animate__fadeInUp">
-                <div class="result">
-                    <i class="fas fa-trophy gold"></i>
-                    <h3>150+</h3>
-                    <p>Sainik School Selections</p>
-                </div>
-                <div class="result">
-                    <i class="fas fa-trophy silver"></i> 
-                    <h3>80+</h3>
-                    <p>Military School Selections</p>
-                </div>
-                <div class="result">
-                    <i class="fas fa-trophy bronze"></i>
-                    <h3>95+</h3>
-                    <p>Navodaya Selections</p>
-                </div>
-                <div class="result">
-                    <i class="fas fa-chart-line"></i> 
-                    <h3>20+</h3>
-                    <p>Students in Top 100 JEE/NEET</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="container">
-            <h2 class="animate__animated animate__fadeInUp">Contact NR Academy</h2> 
-            <div class="contact-content">
-                <div class="contact-details animate__animated animate__fadeInRight">
-                    <ul>
-                        <h3>Get in Touch</h3>
-                        <li><i class="fas fa-map-marker-alt"></i> 
-                        VIZIANAGARAM (PRADEEPNAGAR) | CHEEPURUPALLI (VENKATESWARA NAGAR) 
-                        </li>
-                        <li><i class="fas fa-phone"></i> +91 8500526695, +91 8121085584</li>
-                        <li><i class="fas fa-envelope"></i>  nracademy.vz@gmail.com</li> 
-                    </ul>
-                    <div class="hours">
-                        <h3>Opening Hours</h3>
-                        <div><span>Monday - Friday:</span> 9:00 AM – 7:00 PM</div>
-                        <div><span>Saturday:</span> 9:00 AM – 6:00 PM</div>
-                        <div><span>Sunday:</span> Closed</div>
+        </section>
+    
+        <section id="about">
+            <div class="container">
+                <h2 data-aos="fade-up">About NR Academy</h2>
+                <div class="about-content">
+                    <div class="about-image" data-aos="fade-right" data-aos-duration="1000"
+                    data-aos-delay="200">
+                        <img src="images/aboutimage.jpg" alt="Teacher and Student">
+                    </div>
+                    <div class="about-text" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-delay="200">
+                    <p>Established in 2019, NR Academy is dedicated to shaping young minds and fostering academic brilliance. Our commitment to providing quality education and individual attention has made us a trusted choice for entrance exam preparation.</p>
+                    <p>We believe in creating a nurturing learning environment that encourages students to think critically, strive for excellence, and develop a strong foundation for their future success. </p>
+                        <a href="#contact" class="btn">Get in Touch</a>
                     </div>
                 </div>
             </div>
-            <div class="map-container animate__animated animate__fadeInUp" style="margin-top: 40px;">
-                <h3>Find Us</h3>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.625548836826!2d78.48870511430342!3d15.477781189290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbdb0a165833895%3A0x6510e881e4a3334d!2sNR%20Academy%2C%20Entrance%20Coaching%20Centre!5e0!3m2!1sen!2sin!4v1708245197199!5m2!1sen!2sin" 
-                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    
+        <section id="courses" class="bg-light"> 
+            <div class="container">
+                <h2 data-aos="fade-up">Our Specialized Courses</h2>
+                <div class="course-grid">
+                    <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                        <img src="images/sainikschool.jpg" alt="Sainik School">
+                        <h3>Sainik Schools</h3>
+                        <p>For Boys & Girls</p>
+                        
+                    </div>
+                    <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                        <img src="images/military.jpg" alt="Military School">
+                        <h3>Military Schools</h3>
+                        <p>Rigorous Training & Discipline</p>
+                       
+                    </div>
+                    <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                        <img src="images/novodaya.avif" alt="Navodaya">
+                        <h3>Navodaya</h3>
+                        <p>Excellence in Education</p>
+                        
+                    </div>
+                    <div class="course animate__animated animate__zoomIn" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="200">
+                        <img src="images/jee.webp" alt="JEE IIT">
+                        <h3>JEE | IIT</h3>
+                        <p>Foundation Classes</p>
+                       
+                    </div>
+                    <div class="course animate__animated animate__zoomIn" data-aos="fade-up"data-aos-duration="1000"
+                    data-aos-delay="200">
+                        <img src="images/neet.webp" alt="NEET">
+                        <h3>NEET</h3>
+                        <p>Foundation Classes</p>
+                        
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <section id="results" class="bg-light">
+            <div class="container">
+                <h2>Our Proven Results</h2>
+                <p class="animate__animated animate__fadeInUp">Our students consistently achieve top ranks in various entrance exams, a testament to our effective coaching methods and their hard work.</p>
+                <div class="results-grid animate__animated animate__fadeInUp">
+                    <div class="result">
+                        <i class="fas fa-trophy gold"></i>
+                        <h3>150+</h3>
+                        <p>Sainik School Selections</p>
+                    </div>
+                    <div class="result">
+                        <i class="fas fa-trophy silver"></i> 
+                        <h3>80+</h3>
+                        <p>Military School Selections</p>
+                    </div>
+                    <div class="result">
+                        <i class="fas fa-trophy bronze"></i>
+                        <h3>95+</h3>
+                        <p>Navodaya Selections</p>
+                    </div>
+                    <div class="result">
+                        <i class="fas fa-chart-line"></i> 
+                        <h3>20+</h3>
+                        <p>Students in Top 100 JEE/NEET</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="contact">
+            <div class="container">
+                <h2 class="animate__animated animate__fadeInUp">Contact NR Academy</h2> 
+                <div class="contact-content">
+                    <div class="contact-details animate__animated animate__fadeInRight">
+                        <ul>
+                            <h3>Get in Touch</h3>
+                            <li><i class="fas fa-map-marker-alt"></i> 
+                            VIZIANAGARAM (PRADEEPNAGAR) | CHEEPURUPALLI (VENKATESWARA NAGAR) 
+                            </li>
+                            <li><i class="fas fa-phone"></i> +91 8500526695, +91 8121085584</li>
+                            <li><i class="fas fa-envelope"></i>  nracademy.vz@gmail.com</li> 
+                        </ul>
+                        <div class="hours">
+                            <h3>Opening Hours</h3>
+                            <div><span>Monday - Friday:</span> 9:00 AM – 7:00 PM</div>
+                            <div><span>Saturday:</span> 9:00 AM – 6:00 PM</div>
+                            <div><span>Sunday:</span> Closed</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container animate__animated animate__fadeInUp" style="margin-top: 40px;">
+                    <h3>Find Us</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.625548836826!2d78.48870511430342!3d15.477781189290784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbdb0a165833895%3A0x6510e881e4a3334d!2sNR%20Academy%2C%20Entrance%20Coaching%20Centre!5e0!3m2!1sen!2sin!4v1708245197199!5m2!1sen!2sin" 
+                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    
+        <footer>
+            <div class="container">
+                <p>© 2023 NR Academy. All Rights Reserved. </p>
+            </div>
+        </footer>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2023 NR Academy. All Rights Reserved. </p>
-        </div>
-    </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"></script>
-    <script src="script.js"></script>
 </body>
 <script>
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -631,8 +787,6 @@ footer {
         });
     });
 });
-
-// Toggle Mobile Navigation
 const menuToggle = document.querySelector('.menu-toggle');
 const navList = document.querySelector('.nav-list');
 
